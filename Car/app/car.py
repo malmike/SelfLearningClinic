@@ -1,36 +1,36 @@
 class Car(object):
-	"""A car class that can be used to instantiate various vehicles"""
-	def __init__(self, car_type, model, name):
-		if car_type:
-			self.type = car_type
-		if model:
-			self.model = model
-		else:
-			self.model = 'GM'
-		if name:
-			self.name = name
-		else:
-			self.name = 'General'
-
-		if self.type == 'koenigsegg' || self.type == 'Porsche':
-			self.num_of_doors = 2
-		else:
-			self.num_of_doors = 4
-
-		if self.type == 'trailer':
-			self.num_of_wheels = 8
-		else:
-			self.num_of_wheels = 4
-		self.speed = 0
-
-
-	def is_saloon(self):
-		if self.type != trailer:
-			return True
-
-	def drive(self, value):
-		if self.title == 'trailer':
-			speed = value*11
-		else:
-			speed = value*(1000/3)
-		return Car()
+    def __init__(self, *args, **kwargs):
+        self.type = ''
+        if len(args)>=1:
+            self.type = args[0]
+        if len(args)>=2:
+            self.model = args[1]
+        else:
+            self.model = 'GM'
+        if len(args)==3:
+            self.name = args[2]
+        else:
+            self.name = 'General'
+        self.speed = 0
+        if self.type != '':
+            self.assign_doors()
+            self.assign_wheels()												
+    def assign_doors(self):
+        if self.type == 'Koenigsegg' or self.type == 'Porshe':
+            self.num_of_doors = 2
+        else:
+            self.num_of_doors = 4
+    def assign_wheels(self):
+        if self.type == 'trailer':
+            self.num_of_wheels = 8
+        else:
+            self.num_of_wheels = 4
+    def is_saloon(self):
+        if self.type != 'trailer':
+            return True
+    def drive(self, value):
+        if self.type == 'trailer':
+            speed = value*11
+        else:
+            speed = value*(1000/3)
+            return Car()
