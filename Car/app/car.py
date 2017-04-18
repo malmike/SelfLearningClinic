@@ -21,15 +21,15 @@ class Car(object):
         else:
             self.num_of_doors = 4
     def assign_wheels(self):
-        if self.type == 'trailer':
+        if self.type == 'MAN':
             self.num_of_wheels = 8
         else:
             self.num_of_wheels = 4
     def is_saloon(self):
-        if self.type != 'trailer':
+        if self.type != 'MAN':
             return True
     def drive(self, value):
-        if self.type == 'trailer':
+        if self.type == 'MAN':
             speed = value*11
         else:
             speed = value*(1000/3)
