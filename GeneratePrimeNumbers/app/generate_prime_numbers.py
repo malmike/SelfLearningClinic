@@ -6,7 +6,8 @@ def generatePrimeNumbers(num):
     if isinstance(num, numbers_types):
         #Check that the value inserted is greater than or equal to 3
         if num >= 3:
-            pass
+            prime_list = []
+            return prime_list
         else:
             raise ValueError
     else:
