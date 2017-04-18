@@ -32,7 +32,7 @@ class Car(object):
             return False
     def drive(self, value):
         if self.type == 'trailer':
-            self.speed = 77
+            self.speed = 11*value
         else:
             self.speed = 10**value
         return self
