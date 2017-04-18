@@ -1,0 +1,1 @@
+For the ssymptotic analysis it is O((N/2)log(N))
