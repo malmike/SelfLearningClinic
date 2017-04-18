@@ -1,5 +1,6 @@
 import unittest
 from math import sqrt
+from app.generate_prime_numbers import *
 
 class TestGeneratePrimeNumbers(unittest.TestCase):
     
