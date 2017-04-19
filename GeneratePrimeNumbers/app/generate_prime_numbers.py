@@ -30,6 +30,8 @@ def generatePrimeNumbers(num):
                 if isPrime:
                     prime_list.append(nextPrime)
                 nextPrime += 2
+            #Print out the list of prime numbers
+            print prime_list
             #Return prime_list        
             return prime_list
         else:
