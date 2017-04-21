@@ -30,11 +30,9 @@ def generatePrimeNumbers(num):
                 if isPrime:
                     prime_list.append(nextPrime)
                 nextPrime += 2
-            #Print out the list of prime numbers
-            print (prime_list)
             #Return prime_list        
             return prime_list
         else:
-            raise ValueError
+            raise ValueError('Number must be greater than 2')
     else:
-        raise TypeError
+        raise TypeError('You can only insert a number')
