@@ -19,7 +19,7 @@ class TestGeneratePrimeNumbers(unittest.TestCase):
         self.assertEqual(self.sample_prime_length, len(generatePrimeNumbers(self.arg_limit)))
 
     def test_generate_prime_numbers_returns_list(self):
-        self.assertTrue(isinstance(generatePrimeNumbers(self.arg_limit), str))
+        self.assertTrue(isinstance(generatePrimeNumbers(self.arg_limit), list))
 
     def test_generate_prime_numbers_returns_list_containing_items(self):
         self.assertFalse(len(generatePrimeNumbers(self.arg_limit)) == 0)
